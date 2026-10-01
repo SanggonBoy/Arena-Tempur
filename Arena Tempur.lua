@@ -2,6 +2,12 @@
 -- PlaceId: 15694891095 | Lobby PLAY + Wall Guns + Upgrader + QueuePads
 -- Toggle: Insert / RightShift / tombol AT. Semua default OFF, tidak menulis
 -- gerakan sebelum user menyentuh slider (pola anti-flicker + anti dobel-jalan).
+-- GUARD: queue_on_teleport Xeno GLOBAL → file bisa dieksekusi di game lain.
+-- PlaceId resmi 15694891095 (wajib persis: universe ini dipakai bersama Pemula Arena).
+if game.PlaceId~=15694891095 then
+	warn('[AT] Dilewati: cheat ini untuk Arena Tempur, bukan game lain (place '..tostring(game.PlaceId)..')')
+	return
+end
 
 local Players=game:GetService('Players')
 local RS=game:GetService('ReplicatedStorage')
